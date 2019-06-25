@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
   connect.query(`SELECT * FROM base`, (error, rows)=> {
     if (error) {
-      //throw error;
+      throw error;
       console.log(error);
     } else {
       console.log('rows:', rows);
